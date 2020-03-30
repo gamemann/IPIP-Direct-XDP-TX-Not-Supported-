@@ -37,17 +37,17 @@ int find_map_fd(struct bpf_object *bpf_obj, const char *mapname)
 
 	map = bpf_object__find_map_by_name(bpf_obj, mapname);
 
-        if (!map) 
-        {
-            fprintf(stderr, "Error finding eBPF map: %s\n", mapname);
+    if (!map) 
+    {
+        fprintf(stderr, "Error finding eBPF map: %s\n", mapname);
 
-            goto out;
-	    }
+        goto out;
+    }
 
 	fd = bpf_map__fd(map);
 
- out:
-	return fd;
+    out:
+	    return fd;
 }
 
 
