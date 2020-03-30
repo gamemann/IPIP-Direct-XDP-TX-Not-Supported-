@@ -168,13 +168,6 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    struct rlimit r = {RLIM_INFINITY, RLIM_INFINITY};
-    if (setrlimit(RLIMIT_MEMLOCK, &r)) {
-        perror("setrlimit(RLIMIT_MEMLOCK)");
-        return 1;
-    }
-
-
     int prog_fd, err;
     int ifindex;
     uint32_t xdp_flags;
