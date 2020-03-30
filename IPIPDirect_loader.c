@@ -6,7 +6,6 @@
 #include <signal.h>
 #include <inttypes.h>
 #include <unistd.h>
-#include <sys/resource.h>
 
 #include <bpf/bpf.h>
 #include <bpf/libbpf.h>
