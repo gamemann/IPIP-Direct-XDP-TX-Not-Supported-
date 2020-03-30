@@ -32,10 +32,10 @@ void signHdl(int tmp)
 
 int find_map_fd(struct bpf_object *bpf_obj, const char *mapname)
 {
-	struct bpf_map *map;
-	int fd = -1;
+    struct bpf_map *map;
+    int fd = -1;
 
-	map = bpf_object__find_map_by_name(bpf_obj, mapname);
+    map = bpf_object__find_map_by_name(bpf_obj, mapname);
 
     if (!map) 
     {
@@ -44,10 +44,10 @@ int find_map_fd(struct bpf_object *bpf_obj, const char *mapname)
         goto out;
     }
 
-	fd = bpf_map__fd(map);
+    fd = bpf_map__fd(map);
 
     out:
-	    return fd;
+        return fd;
 }
 
 
